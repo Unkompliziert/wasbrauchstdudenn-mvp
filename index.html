@@ -71,10 +71,6 @@
       caret-color: var(--riesling-gelb-dunkel);
     }
 
-    .search-wrapper input[type="text"]:hover {
-      /* no shadow */
-    }
-
     .search-wrapper input[type="text"]:focus {
       border-color: var(--gruen-hell);
       caret-color: var(--gruen);
@@ -134,7 +130,6 @@
 
   <script>
     const input = document.querySelector('input[type="text"]');
-    const form = document.querySelector('form') || document.createElement('form');
   
     input.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
