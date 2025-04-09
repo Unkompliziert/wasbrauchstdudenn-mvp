@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danke!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gruen: #4c6534;
+      --gruen-hell: #8da178;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cabin', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      background-color: #fefefc;
+      color: var(--gruen);
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: var(--gruen);
+      border: 2px solid var(--gruen);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: var(--gruen);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vielen Dank!</h1>
+    <p>Deine Anfrage wurde erfolgreich übermittelt.<br>Wir kümmern uns drum – und melden uns bei dir.</p>
+    <a href="index.html">Zurück zur Startseite</a>
+  </div>
+</body>
+</html>

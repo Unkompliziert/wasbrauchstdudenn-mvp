@@ -3,71 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wasbrauchstdudenn</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>wasbrauchstdudenn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --riesling-gelb: #fef3c0;
+      --riesling-gelb-dunkel: #f1dd88;
+      --gruen: #4c6534;
+      --gruen-hell: #8da178;
+      --schrift: 'Cabin', sans-serif;
+      --text: 'DM Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--text);
+      background-color: #fff;
+      color: var(--gruen);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: var(--schrift);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--gruen);
+    }
+
+    .subline {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .search-wrapper {
+      margin: 1.5rem 0;
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+    }
+
+    .search-wrapper input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 3rem 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 16px;
+      border: 2px solid var(--riesling-gelb-dunkel);
+      outline: none;
+      transition: all 0.3s ease;
+      caret-color: var(--riesling-gelb-dunkel);
+    }
+
+    .search-wrapper input[type="text"]:hover {
+      /* no shadow */
+    }
+
+    .search-wrapper input[type="text"]:focus {
+      border-color: var(--gruen-hell);
+      caret-color: var(--gruen);
+    }
+
+    .search-wrapper .icon {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    .link {
+      margin-top: auto;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .link a {
+      color: var(--gruen);
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .link a:hover {
+      color: var(--gruen-hell);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      padding: 0.5rem 0 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Was brauchst du denn?</h1>
-      <p class="subtitle">Finde lokale Hilfe in Neustadt & Umgebung – schnell, einfach & menschlich.</p>
-      <a href="#anfrage" class="button">Jetzt Anfrage stellen</a>
+  <main>
+    <h1>Was brauchst du denn?</h1>
+    <div class="search-wrapper">
+      <input type="text" placeholder="z.B. Gärtner, Regal aufbauen, Terrassenplatten verlegen…">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
     </div>
-  </header>
-
-  <section class="section">
-    <div class="container">
-      <h2>✅ Hilfe finden war noch nie so einfach</h2>
-      <p>Egal ob Gärtner, Elektriker oder jemand, der einfach mal anpackt – wir bringen dich mit den richtigen Leuten aus deiner Region zusammen.</p>
-    </div>
-  </section>
-
-  <section class="section light">
-    <div class="container">
-      <h2>📦 In 3 Schritten zu deiner Unterstützung</h2>
-      <ol>
-        <li><strong>Anfrage stellen:</strong> Sag uns kurz, was du brauchst.</li>
-        <li><strong>Wir vermitteln:</strong> Passende Dienstleister werden benachrichtigt.</li>
-        <li><strong>Hilfe kommt:</strong> Du bekommst Kontakt & Angebot – fertig.</li>
-      </ol>
-      <a href="#anfrage" class="button">Formular öffnen</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>🛠 Warum wir?</h2>
-      <ul>
-        <li>✔ Lokal vernetzt</li>
-        <li>✔ Persönlich & vertrauenswürdig</li>
-        <li>✔ Kein Algorithmus – echte Menschen</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section light" id="anfrage">
-    <div class="container">
-      <h2>📬 Anfrage stellen</h2>
-      <form>
-        <label for="name">Dein Name</label>
-        <input type="text" id="name" placeholder="Max Mustermann" />
-
-        <label for="email">Deine E-Mail</label>
-        <input type="email" id="email" placeholder="max@example.com" />
-
-        <label for="anliegen">Was brauchst du?</label>
-        <textarea id="anliegen" placeholder="Z.B. Hilfe beim Garten, Stromausfall, Möbelmontage..."></textarea>
-
-        <button type="submit">Absenden</button>
-      </form>
-    </div>
-  </section>
-
+    <div class="subline">Einfach eingeben, was du suchst – wir finden lokale Hilfe.</div>
+  </main>
+  <div class="link">
+    <a href="wie-funktioniert-das.html">Wie funktioniert das?</a>
+  </div>
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Unkompliziert UG – Betreiber von wasbrauchstdudenn.de</p>
-      <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
-    </div>
+    © 2025 wasbrauchstdudenn
   </footer>
+
+  <script>
+    const input = document.querySelector('input[type="text"]');
+    const form = document.querySelector('form') || document.createElement('form');
+  
+    input.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        window.location.href = `suchergebnisse.html?q=${encodeURIComponent(input.value)}`;
+      }
+    });
+  
+    const searchButton = document.querySelector('.icon');
+    if (searchButton) {
+      searchButton.addEventListener('click', function () {
+        window.location.href = `suchergebnisse.html?q=${encodeURIComponent(input.value)}`;
+      });
+    }
+  </script>
 </body>
 </html>
